@@ -17,7 +17,8 @@ public class Principal {
 		//ejer3.iniciar();
 		
 		//EJERCICIO 4// 
-		
+		//Ejercicio4Math ejer4 = new Ejercicio4Math();
+		//ejer4.iniciar();
 	}
 
 }

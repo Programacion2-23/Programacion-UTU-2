@@ -11,6 +11,7 @@ public class Ejercicio2Random {
 		String resul;
 		
 		do {
+			System.out.println(valor);
 			num = pedirNumero();
 			resul=compararNumeros(num, valor);
 			System.out.println(resul);
