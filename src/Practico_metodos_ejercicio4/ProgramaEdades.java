@@ -12,30 +12,40 @@ public class ProgramaEdades {
 	
 	void inicio (int edad) {
 		
-		ingresoEdades(edad);
-		contar();
+		int edadesIng = edad;
+		
+		ingresoEdades(edadesIng);
 		mostrar();
 	}
 	
-	//GUARDA LAS EDADES INGRESADAS
+	//GUARDA LAS EDADES INGRESADAS Y CONTARLAS
 	void ingresoEdades(int a) {
 		edades = new int [a];
 		
 		for (int i = 0; i < edades.length; i++) {
 			System.out.println("Introduzca sus " + a + " edades: ");
 			edades[i] = entrada.nextInt();
+			
+			if (edades[i] <= 18) {
+				menores++;
+				
+			} else if (edades[i] >= 18 && edades[i] <= 59) {
+				mayores++;
+				
+			} else if (edades[i] >= 60) {
+				adultosMayores++;
+				
+			}
+				
 		}
-		
-	}
-	
-	//CONTAR CUANTOS SON MAYORES,MENORES Y ADULTOS MAYORES
-	void contar () {
-		
 		
 	}
 	
 	//MOSTRAR EN PANTALLA LA INFORMACION
 	void mostrar() {
 		
+		System.out.println("Los menores de 18 son: " + menores);
+		System.out.println("Los mayores de 18 son: " + mayores);
+		System.out.println("Los adultos mayores son: " + adultosMayores);
 	}
 }
